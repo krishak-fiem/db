@@ -12,7 +12,7 @@ var Session gocqlx.Session
 
 func init() {
 	cluster := gocql.NewCluster(env.Get("CASSANDRA_HOST"))
-
+	cluster.Port = 9042
 	session, err := gocqlx.WrapSession(cluster.CreateSession())
 	if err != nil {
 		log.Fatal(err)
