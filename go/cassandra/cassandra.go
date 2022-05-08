@@ -17,6 +17,15 @@ func init() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	session.KeyspaceMetadata("public")
+	err = session.ExecStmt(`CREATE KEYSPACE IF NOT EXISTS public
+									WITH REPLICATION = { 
+									'class' : 'NetworkTopologyStrategy',
+									'replication_factor' : 1
+							};`)
+	if err != nil {
+		log.Fatal(err)
+	}
 	Session = session
 }
 
