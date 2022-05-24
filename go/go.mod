@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/gocql/gocql v0.0.0-20200131111108-92af2e088537
-	github.com/krishak-fiem/utils/go v0.0.0-20220507105108-4de8a447d252
+	//github.com/krishak-fiem/utils/go v0.0.0-20220507105108-4de8a447d252
 	github.com/scylladb/gocqlx/v2 v2.7.0
 )
 
